@@ -1,5 +1,12 @@
 # Changelog
 
+### v1.1.1
+
+*Released: March Xth 2021*
+
+- Add capability to allow for DNS alias mode.
+
+
 ### v1.1.0
 
 *Released: February 25th 2021*
