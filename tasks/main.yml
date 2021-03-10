@@ -137,6 +137,7 @@
 - name: Issue acme.sh certificate(s) (this will sleep for dns_sleep seconds)
   command: >-
     ./acme.sh --issue -d {{ item.domains | join(" -d ") }}
+    {{ "--challenge-alias" if item.challenge-alias | default(acme_sh_default_challenge_alias) }}
     --dns {{ item.dns_provider | default(acme_sh_default_dns_provider) }}
     --dnssleep {{ item.dns_sleep | default(acme_sh_default_dns_sleep) }}
     {{ "--force" if item.force_issue | default(acme_sh_default_force_issue) else "" }}
