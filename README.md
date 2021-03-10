@@ -166,6 +166,13 @@ acme_sh_default_dns_provider: "dns_dgon"
 #      "DO_API_KEY": "THE_API_SECRET_TOKEN_FROM_THE_DO_DASHBOARD"
 acme_sh_default_dns_provider_api_keys: {}
 
+# When issuing certificates, the use of DNS Alias can be accomplished by setting
+# a challenge alias domain. This feature can be useful if you don't have API access
+# to the domain you want to issue certificates for or you don't want to give access
+# to acme.sh - read more about DNS alias at 
+# https://github.com/acmesh-official/acme.sh/wiki/DNS-alias-mode
+acme_sh_default_challenge_alias: ""
+
 # How long should acme.sh sleep after attempting to set the TXT record to your
 # DNS records? Some DNS providers do not update as fast as others.
 #
